@@ -1,0 +1,92 @@
+body {
+
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: var(--corPrimaria);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* PRA QUE SERVE ESSE SECTION? */
+section {
+    display: none;
+}
+
+form {
+    background-color: var(--background); /* UTILIZAR A VAR(--BACKGROUND) PRA PADRONIZAR*/
+    width: 90%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 515px;
+    border-radius: 10px;
+
+}
+
+h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 42px;
+    color: #FFFFFF;
+
+}
+
+form input {
+    width: 80%;
+    max-width: 297px;
+}
+
+p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+p a {
+    color: var(--corPrimaria);
+    font-weight: bold;
+}
+
+@media (max-width: 769px){
+    p {
+        text-align: center;
+    }
+
+    p a {
+        margin-top: 10px;
+        display: block;
+    }
+}
+
+#divPassGroup {
+    width: 85%;
+    max-width: 311px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#divPassGroup input{
+    width: -webkit-fill-available;
+    max-width: 297px;
+}
+
+#divPassGroup span {
+    font-size: 12px;
+    display: block;
+    color: #fff;
+    margin-top: 4px;
+}

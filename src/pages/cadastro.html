@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/cadastro.css">
+  <title>Blog - Cadastro</title>
+</head>
+
+<body>
+  <main>
+    <section>
+
+    </section>
+    <form>
+      <h2>Cadastro</h2>
+      <input id="inputName" type="text" placeholder="Nome do usuário" required minlength="3" maxlength="20">
+      <input id="inputMail" type="email" placeholder="Email" required minlength="7" maxlength="30">
+      <input id="inputPhoto" type="text" placeholder="Foto de perfil" required>
+      <div id="divPassGroup">
+        <input id="inputPassword" type="password" placeholder="Senha" required minlength="8" maxlength="12">
+        <span>A senha deve ter oito ou mais caracteres, com pelo menos uma letra minúscula e uma maiúscula.</span>
+      </div>
+      <button id="btnRegister" type="submit" class="btn">Cadastrar</button>
+      <p>Já possui uma conta? <a href="../../index.html">Entrar</a></p>
+    </form>
+  </main>
+  <script type="module" src="../scripts/register.js"></script>
+</body>
+
+</html>

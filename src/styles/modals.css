@@ -1,0 +1,75 @@
+/*MODAL FIXO, COM FUNDO PRETO TRANSPARENTE*/
+.modals {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000ba;
+}
+
+@media (max-width: 769px){
+    .modals {
+        width: auto;
+        padding: 0 30px;
+    }
+}
+
+.modals.hidden{
+    display: none;
+}
+
+/*BOX DO MODAL, COM COR DE FUNDO E TAMANHO FIXO*/
+.modals .form__modal {
+    background: var(--background);
+    border-radius: 10px;
+    width: 430px;
+    text-align: center;
+    position: relative;
+    padding: 70px 37px 40px 37px;
+}
+
+@media (max-width: 769px){
+    .modals .form__modal {
+        padding: 70px 28px 40px 28px;
+    }
+}
+
+/*TÍTULO DO MODAL*/
+.modals .form__modal h2 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #FFFFFF;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    margin-bottom: 25px;
+}
+
+/*CAMPO PARA EDITAR COMENTÁRIO*/
+.modals .form__modal textarea {
+    padding-top: 20px;
+    margin-top: 21px;
+    margin-bottom: 30px;
+}
+
+/*BOTAO DE FECHAR*/
+.modals .button_close {
+    position: absolute;
+    right: 16px;
+    color: #FFFFFF;
+    top: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 6px 25px;
+}
+
+/* AVISO DE TEXTO*/
+#aviso {
+    color: red;
+    font: 16px;
+    font-weight: bold;
+    margin-top: 25px;
+}

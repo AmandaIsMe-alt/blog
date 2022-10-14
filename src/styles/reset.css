@@ -1,0 +1,166 @@
+:root{
+	--corPrimaria: #454D6B;
+    --background: #6495ED;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Works on Firefox */
+* {
+	scrollbar-color: var(--corPrimaria) var(--background);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--background);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--corPrimaria);
+	border-radius: 20px;
+	border: 1px solid var(--background);
+}
+
+body {
+	background-color: var(--corPrimaria);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+    font-family: 'Inter', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+input, textarea, select {
+	min-height: 49px;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 18px;
+    padding-left: 10px;
+    width: 100%;
+	color: #363457;
+	background: #FFFFFF;
+    border: 1px solid #454D6B;
+	font-family: 'Inter', sans-serif;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder {
+	color: #C3C3C3;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+    font-size: 1rem;
+	box-shadow: none;
+}
+
+/*PADRONIZANDO BOTOES
+APLIQUE A CLASSE .BTN PARA PUXAR A APARÊNCIA*/
+.btn,
+input[type="submit"]{
+	font-size: 15px;
+	background-color: var(--corPrimaria);
+	color: #fff;
+	border-radius: 20px;
+	padding: 10px 44px;
+	cursor: pointer;
+	border: none;
+	font-family: 'Inter', sans-serif;
+	transition: all 300ms ease-in;
+}
+
+@media (max-width: 769px){
+	.btn,
+	input[type="submit"]{
+		padding: 10px 32px;
+	}
+}
+
+/* FUNDO PARA BOTOES DE DELEÇÃO, AVISO */
+.btn-error{
+	background: #FF3F5B;
+}
+
+/* EXTRA: APARÊNCIA DA MENSAGEM DE AVISO */
+#mensagem__aviso{
+	position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000ba;
+    opacity: 1;
+    transition: all 300ms ease-in;
+}
+
+/* EXTRA:  ESTILIZANDO O TEXTO DA MENSAGEM DE AVISO */
+#mensagem__aviso p {
+    background-color: var(--background);
+    font-size: 18px;
+    font-weight: bold;
+	color: #FFFFFF;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	border-radius: 10px;
+    width: 430px;
+    text-align: center;
+	padding: 40px 37px;
+}
+
+@media (max-width: 769px){
+	#mensagem__aviso p {
+		width: 70%;
+	}
+}

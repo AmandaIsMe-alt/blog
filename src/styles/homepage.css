@@ -1,0 +1,372 @@
+@import "modals.css"; 
+
+/* ESTILIZANDO CABEÇALHO */
+header {
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 10%;
+}
+
+@media (max-width: 769px){
+    header {
+        padding: 15px 20px;
+        gap: 15px;
+    }
+}
+
+/*IMG PERFIL E NOME LADO A LADO*/
+header div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+header div {
+    max-width: 65%;
+    width: 100%;
+}
+
+/*TAMANHO FIXO PARA IMG PERFIL*/ 
+header figure{
+    width: 70px;
+    height: 66px;
+    border-radius: 100%;
+    overflow: hidden;
+    flex: 0 0 70px;
+}
+
+@media (max-width: 769px){
+    header figure{
+        width: 50px;
+        height: 66px;
+    }
+}
+
+/*IMAGEM PERFIL*/
+header figure img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/*NOME DO USUÁRIO*/
+header h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 769px){
+    header h2 {
+        width: 100%;
+    }
+}
+
+/* SEÇÃO PARA FAZER UM POST */
+#section__blankField{
+    margin: 40px auto;
+    background: #ECF0F1;
+    border-radius: 20px;
+    min-height: 110px;
+    padding: 32px 41px;
+}
+
+@media (max-width: 769px){
+    #section__blankField { 
+        max-width: 80%;
+        padding: 27px 20px;
+    }
+}
+
+@media (min-width: 769px){
+    #section__blankField{
+        width: 100%;
+        max-width: 666px;
+        margin: 98px auto;
+    }
+}
+
+/*INPUT NO QUE ESTA PENSANDO*/
+#section__blankField textarea,
+#section__blankField textarea::placeholder {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    color: #363457;
+}
+
+@media (max-width: 769px){
+    #section__blankField textarea {
+        padding-left: 0;
+    }
+}
+
+/*BOTAO POSTAR*/
+#section__blankField .btn{
+    float: right;
+    margin-top: 5px;
+}
+
+@media (max-width: 769px){
+    #section__blankField .btn{
+        font-size: 0;
+        margin-top: 20px;
+    }
+
+    #section__blankField .btn:before{
+        content: "+";
+        display: block;
+        position: relative;
+        font-weight: 700;
+        font-size: 29px;
+        height: 18px;
+        line-height: 14px;
+    }
+}
+
+/*SEÇÃO DE PAGINAÇÃO*/
+#section__pagination {
+    width: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 769px){
+    #section__pagination { 
+        padding: 0 20px;
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 769px){
+    #section__pagination { 
+        width: 100%;
+        max-width: 746px;
+    }
+}
+
+/* DIV COM BOTOES PARA DEIXAR LADO A LADO */
+.div__pagination{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 26px;
+    gap: 22px;
+}
+
+@media (max-width: 769px){
+    .div__pagination {
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 62px;
+    }
+}
+
+/*PADRONIZANDO OS BOTOES DE PÁGINAÇÃO*/
+.div__pagination .btn {
+    background-color: #333b56;
+    padding: 8px 16PX;
+}
+
+.div__pagination .btn:hover,
+.div__pagination .btn:focus{
+    background-color: #7586c7;
+}
+
+@media (max-width: 769px){
+
+    .div__pagination .btn,
+    #btnFisrtPage, 
+    #btnLastPage {
+        padding: 7px 22px;
+        font-size: 16px;
+    }
+
+    .div__pagination .btn span {
+        display: none;
+    }
+}
+
+/*BOTOES PRIMEIRA E ÚLTIMA PÁGINA*/
+#btnFisrtPage, 
+#btnLastPage {
+    font-size: 20px;
+}
+
+/* SEÇÃO DOS POSTS */
+#section__posts { 
+    width: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 769px){
+    #section__posts { 
+        padding: 0 20px;
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 769px){
+    #section__posts { 
+        width: 100%;
+        max-width: 746px;
+    }
+}
+
+/*POST INDIVIDUAL*/
+.div__post{
+    background: #ECF0F1;
+    border-radius: 20px;
+    padding: 35px 26px;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+@media (max-width: 769px){
+    .div__post{
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 13px 20px;
+    }
+}
+
+@media (min-width: 769px){
+    .div__post{
+        display: flex;
+        gap: 47px;
+    }
+
+    .div__post.meu__post{
+        min-height: 162px;
+    }
+}
+
+/*CONTEUDO DOS POSTS*/
+.div__post  .div__content__posts{
+    width: 100%;
+    position: relative;
+}
+
+ /*TAMANHO FIXO PARA IMAGEM*/
+ .div__post .div__photo__posts figure {
+    width: 122px;
+    height: 115px;
+    border-radius: 100%;
+    overflow: hidden
+}
+
+@media (max-width: 769px){
+    .div__post .div__photo__posts figure {
+        margin: 0 auto;
+        width: 78.05px;
+        height: 79px;
+    }
+}
+
+/*IMAGEM*/
+.div__post .div__photo__posts img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/*TITULO DO POST*/
+.div__post  .div__content__posts h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #030000;
+    margin-bottom: 15px;
+}
+
+/*TEXTO DO POST*/
+.div__post  .div__content__posts p,
+/*DATA DO POST*/
+.div__post  .div__content__posts span {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #363457;
+    width: 100%;
+    word-break: break-word;
+}
+
+@media (min-width: 769px){
+    .div__post  .div__content__posts p{
+        position: relative;
+        margin-bottom: 50px;
+    }
+}
+
+/*DATA DO POST*/
+.div__post  .div__content__posts span {
+    display: block;
+    margin-top: 25px;
+}
+
+@media (min-width: 769px){
+    .div__post  .div__content__posts span {
+        text-align: right;
+    }
+    
+    .div__post.meu__post .div__content__posts span {
+        float: right;
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/*DIV DOS BOTOES DE AÇÕES*/
+.btnsMobile{
+    display: flex;
+}
+
+@media (max-width: 769px){
+    .btnsMobile{
+        width: 100%;
+        margin-top: 25px;
+        justify-content: center;
+        gap: 25px;
+    }
+}
+
+@media (min-width: 769px){
+    .btnsMobile{
+        position: absolute;
+        left: 38px;
+        top: 160px;
+        gap: 32px;
+    }
+}
+
+/*APARENCIA DO BOTAO DE AÇÃO*/
+.btnsMobile button{
+    width: auto;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 100%;
+    background: #4a88da;
+}
+
+.btnsMobile button:last-child{
+    /*FUNDO PARA O BOTAO DE DELEÇÃO*/
+    background: #ff3f5b;
+}
+
+/*IMAGEM DO BOTAO*/
+.btnsMobile button img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
